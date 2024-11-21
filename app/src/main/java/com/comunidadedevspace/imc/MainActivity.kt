@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         //Recuperando botao calcular
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
+       //configurando acao botao
         btnCalcular.setOnClickListener {
             val peso = edtPeso.text
             val altura = edtAltura.text
