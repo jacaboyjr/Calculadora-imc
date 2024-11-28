@@ -12,23 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Recuperar os componentes edit text
-        // Criar uma váriavel que armazene a entrada do usuário UI TextInputEditText
-
-        //Recuperar edit text - Campos de textos
         val edtPeso = findViewById<TextInputEditText>(R.id.edt_peso)
         val edtAltura = findViewById<TextInputEditText>(R.id.edt_altura)
 
-        //Recuperando botao calcular
         val btnCalcular = findViewById<Button>(R.id.btn_calcular)
 
-       //configurando acao botao
         btnCalcular.setOnClickListener {
             val pesoStr: String = edtPeso.text.toString()
             val alturaStr : String  = edtAltura.text.toString()
 
             if(pesoStr == "" && alturaStr == ""){
-                //Mostrar mensagem para o usuario
                 Snackbar.make(
                     edtPeso,
                     "Preencha todos os campos",
@@ -41,12 +34,6 @@ class MainActivity : AppCompatActivity() {
 
                 val alturaQ2 = altura * altura
                 val resultado = peso / alturaQ2
-
-                //NAVEGAR PARA A PROXIMA TELA
-                // CRIAR O LAYOUT DA PROXIMA TELA
-                //PROGRAMAR A PROXIMA TELA
-
-                //INTENT - CLASSE DO PROPRIO ANDROID
 
                 val intent = Intent(this, ResultActivity::class.java)
                 intent.putExtra(KEY_RESULT_IMC, resultado)
