@@ -32,7 +32,7 @@ class ResultActivity : AppCompatActivity() {
             } else if (result > 29.9 && result<= 30.9){
                 "OBESIDADE"
             } else {
-                "OBESIDADE GRAVE"
+                "OBESIDADE SEVERA"
             }
 
             tvclassificacao.text = classificacao
